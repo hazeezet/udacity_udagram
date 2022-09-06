@@ -14,5 +14,5 @@ services:
     image: udacity_udagram_api_feed:v1.0.0
   frontend:
     build:
-      context: ./udagram-frontend
-    image: udagram-frontend:local
+      context: ./udagram_frontend
+    image: udacity_udagram-frontend:v1.0.0
