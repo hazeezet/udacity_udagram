@@ -39,7 +39,12 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
     // Root URI call
     app.get( '/', async ( req, res ) => {
         res.send( '/api/v0/' );
-    } );
+    });
+
+    // Health URI call
+    app.get( '/health', async ( req, res ) => {
+        res.send( 'Yeah, am stil alive' );
+    });
 
 
     // Start the Server
