@@ -28,6 +28,6 @@ jobs:
             context: ./udagram_frontend
             file: ./udagram_frontend/dockerfile
             push: true
-            tags: ${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_frontend:v1.0.1
+            tags: ${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_frontend:v1.0.2
             cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_frontend:buildcache
             cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_frontend:buildcache,mode=max
