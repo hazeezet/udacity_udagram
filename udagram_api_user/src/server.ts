@@ -7,6 +7,8 @@ import {IndexRouter} from './controllers/v0/index.router';
 import bodyParser from 'body-parser';
 import {V0_USER_MODELS} from './controllers/v0/model.index';
 
+import morgan  from 'morgan';
+
 
 (async () => {
     sequelize.addModels(V0_USER_MODELS);
@@ -18,6 +20,8 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
     const port = process.env.PORT || 8080;
 
     app.use(bodyParser.json());
+
+	app.use(morgan('combined'));
 
     // We set the CORS origin to * so that we don't need to
     // worry about the complexities of CORS this lesson. It's
