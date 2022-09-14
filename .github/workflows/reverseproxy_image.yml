@@ -28,6 +28,6 @@ jobs:
             context: ./udagram_reverseproxy
             file: ./udagram_reverseproxy/dockerfile
             push: true
-            tags: ${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_reverseproxy:v1.0.4
+            tags: ${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_reverseproxy:v1.0.5
             cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_reverseproxy:buildcache
             cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/udacity_udagram_reverseproxy:buildcache,mode=max
